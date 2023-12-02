@@ -10,12 +10,8 @@ app.get('/webhook',(req,res)=>{
 })
 
 app.post("/",(req,res)=>{
-    // let body_param=req.body;
-    // console.log(JSON.stringify(body_param,null,2));
-    // res.send(body_param);
 
-    var data=getTextMessage(+18709090517,"Welcome To My new Business whtsapp");
-
+    let data=getTextMessage("918709090517","Welcome To My new Business whtsapp");
     sendMessage(data).then(function(responce){
         console.log("message send successfully");
         res.sendStatus(200);
